@@ -165,7 +165,6 @@ var attachListeners = () => {
 
   //Clearn Button functionality
   $("#clear").on("click", function(){
-    currentGame = 0;
     resetGame();
   })
 }
