@@ -94,14 +94,14 @@ var doTurn = (tdElement) => {
   }
 }
 
-var renderGame = (game) => {
+var gameButton = (game) => {
   // return `<li><BUTTON onclick="showGame(${game["id"]})">${game["id"]}</BUTTON></li>`
   return `<button onclick="showGame(${game["id"]})">${game["id"]}</button>`
 
 }
 
-var renderGamesList = (data) =>{
-  var result = data["data"].map(game => renderGame(game)).join('');
+var gameButtonList = (data) =>{
+  var result = data["data"].map(game => gameButton(game)).join('');
   if (result){
     // return `<ul>${result}</ul>`
     return result;
@@ -126,7 +126,7 @@ var showGame = (gameID) => {
     //     index++;
     //   }
     // }
-    
+
     turn = turnPerState(returnedState);
     currentGame = parseInt(response["data"]["id"])
   })
@@ -178,7 +178,7 @@ var attachListeners = () => {
   //Previous Button functionality
   $("#previous").on("click", function(){
     $.get('/games', data => {
-      $("#games").html(renderGamesList(data));
+      $("#games").html(gameButtonList(data));
     })
   })
 
