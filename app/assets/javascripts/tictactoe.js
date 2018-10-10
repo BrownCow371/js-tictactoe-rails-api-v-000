@@ -81,9 +81,9 @@ var doTurn = (tdElement) => {
   if (moveValid(tdElement)) {
     updateState(tdElement);
     turn ++;
-    var gameWon = checkWinner();
+    // var gameWon = checkWinner();
 
-    if (gameWon) {
+    if (checkWinner()) {
       saveFunction();
       resetGame();
     } else if (gameOver()) {
