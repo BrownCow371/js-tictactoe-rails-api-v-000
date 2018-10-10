@@ -121,10 +121,16 @@ var showGame = (gameID) => {
 
 var saveFunction = () => {
   var captureState = [];
+  
   for (let i=0; i < 9; i++){
     captureState[i] =  $("td")[i].textContent;
   }
-  // console.log("state", captureState)
+
+  //Alternative to the above loop per Learn solution
+  
+  // $('td').text((index, square) => {
+  //   state.push(square);
+  // });
 
   //if this is an existing game, update it
     if (currentGame > 0) {
