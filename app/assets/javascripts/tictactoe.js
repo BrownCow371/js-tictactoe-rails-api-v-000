@@ -52,6 +52,8 @@ var resetGame = () => {
   for (let i=0; i<9; i++) {
     $('td')[i].innerHTML = "";
   }
+  // $('td').empty();
+
   turn = 0;
   currentGame = 0;
 }
