@@ -121,13 +121,13 @@ var showGame = (gameID) => {
 
 var saveFunction = () => {
   var captureState = [];
-  
+
   for (let i=0; i < 9; i++){
     captureState[i] =  $("td")[i].textContent;
   }
 
   //Alternative to the above loop per Learn solution
-  
+
   // $('td').text((index, square) => {
   //   state.push(square);
   // });
@@ -169,7 +169,7 @@ var attachListeners = () => {
     })
   })
 
-  //Clearn Button functionality
+  //Clear Button functionality
   $("#clear").on("click", function(){
     resetGame();
   })
