@@ -31,6 +31,22 @@ var checkWinner = () => {
   }
 }
 
+// function checkWinner() {
+//   var board = {};
+//   var winner = false;
+// 
+//   $('td').text((index, square) => board[index] = square);
+// 
+//   WINNING_COMBOS.some(function(combo) {
+//     if (board[combo[0]] !== "" && board[combo[0]] === board[combo[1]] && board[combo[1]] === board[combo[2]]) {
+//       setMessage(`Player ${board[combo[0]]} Won!`);
+//       return winner = true;
+//     }
+//   });
+// 
+//   return winner;
+// }
+
 var resetGame = () => {
   for (let i=0; i<9; i++) {
     $('td')[i].innerHTML = "";
