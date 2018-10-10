@@ -109,11 +109,24 @@ var renderGamesList = (data) =>{
 }
 
 var showGame = (gameID) => {
+  document.getElementById('message').innerHTML = '';
+
   $.get(`/games/${gameID}`, function(response){
     let returnedState = response["data"]["attributes"]["state"]
+
     for (let i=0; i<9; i++) {
       $('td')[i].innerHTML = returnedState[i];
     }
+    //Optional solution per Learn
+
+    // let index = 0;
+    // for (let y = 0; y < 3; y++) {
+    //   for (let x = 0; x < 3; x++) {
+    //     document.querySelector(`[data-x="${x}"][data-y="${y}"]`).innerHTML = returnedState[index];
+    //     index++;
+    //   }
+    // }
+    
     turn = turnPerState(returnedState);
     currentGame = parseInt(response["data"]["id"])
   })
