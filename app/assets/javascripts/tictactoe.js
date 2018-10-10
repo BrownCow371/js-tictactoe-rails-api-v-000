@@ -53,6 +53,7 @@ var resetGame = () => {
     $('td')[i].innerHTML = "";
   }
   turn = 0;
+  currentGame = 0;
 }
 
 var moveValid = (tdElement) => {
